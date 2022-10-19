@@ -9,14 +9,17 @@ class homepage extends StatefulWidget {
   State<homepage> createState() => _homepageState();
 }
 
+//Controladores para captura de valor durante o input
 final TextEditingController _realController = TextEditingController();
 final TextEditingController _dolarController = TextEditingController();
 final TextEditingController _euroController = TextEditingController();
 
+//Variável para cada moeda
 double? real;
 double? dolar;
 double? euro;
 
+//Funcoes de conversao de cada moeda
 void _onchangedReal(String tx) {
   var re = double.tryParse(tx);
   if (tx.isNotEmpty) {
